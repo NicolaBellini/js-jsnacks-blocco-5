@@ -2,56 +2,64 @@
 const cucumbers = [
   {
     varietà: "bab",
-    peso: 120,
-    lunghezza: 20,
+    peso: randomNum(50,300),
+    lunghezza: randomNum(10,40),
   },
   {
     varietà: "ddx",
-    peso: 120,
-    lunghezza: 20,
+    peso: randomNum(50,300),
+    lunghezza: randomNum(10,40),
   },
   {
     varietà: "aaf",
-    peso: 120,
-    lunghezza: 20,
+    peso: randomNum(50,300),
+    lunghezza: randomNum(10,40),
   },
   {
     varietà: "sdf",
-    peso: 120,
-    lunghezza: 20,
+    peso: randomNum(50,300),
+    lunghezza: randomNum(10,40),
   },
   {
     varietà: "wsa",
-    peso: 120,
-    lunghezza: 20,
+    peso: randomNum(50,300),
+    lunghezza: randomNum(10,40),
   },
   {
     varietà: "yyh",
-    peso: 120,
-    lunghezza: 20,
+    peso: randomNum(50,300),
+    lunghezza: randomNum(10,40),
   },
   {
     varietà: "bbf",
-    peso: 120,
-    lunghezza: 20,
+    peso: randomNum(50,300),
+    lunghezza: randomNum(10,40),
   },
   {
     varietà: "wsx",
-    peso: 120,
-    lunghezza: 20,
+    peso: randomNum(50,300),
+    lunghezza: randomNum(10,40),
   },
   {
     varietà: "bgb",
-    peso: 120,
-    lunghezza: 20,
+    peso: randomNum(50,300),
+    lunghezza: randomNum(10,40),
   },
   {
     varietà: "scv",
-    peso: 120,
-    lunghezza: 20,
+    peso: randomNum(50,300),
+    lunghezza: randomNum(10,40),
   },
 ]
 
-console.log(cucumbers.length);
+// uso reduce per sommare ogni elemento al totale, inizializzato a 0
+const totalWeight = cucumbers.reduce((total, cucumber) => total + cucumber.peso, 0)
 
-function randomNum
+console.log(totalWeight);
+
+// FUNCTIONS //
+function randomNum(min,max){
+  return Math.ceil(Math.random(max-min)*max)
+}
+
+// JSNACK 2 //

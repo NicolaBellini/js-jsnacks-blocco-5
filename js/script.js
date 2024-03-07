@@ -141,3 +141,34 @@ function giraParola(parola){
 
 
 // JSNACK 4 //
+
+const numeri = [21,3,45,543,6,1,2];
+const lettere = ["a",'za','ax','a']
+console.log(numeri.length,lettere.length);
+const alfanum = createAlfaNum()
+console.log(alfanum);
+
+
+// function //
+
+
+function createAlfaNum(){
+  const alfanum = []
+  // confronto le due lunghezze degli array, prendo la lunghezza più piccola e il suo valore diventa il limit per il ciclo for
+  const limit = Math.min(numeri.length, lettere.length)
+  console.log(limit);
+  // ciclo tutti gli elementi fino a un limit che è la lunghezza più piccola tra le due lunghezze degli arraye li pusho in un array nuovo
+  for(let i=0; i<limit;i++){
+    alfanum.push(numeri[i],lettere[i])
+    console.log(alfanum);
+  }
+  // pusho gli elementi con indice superiore a limit
+  alfanum.push(...numeri.slice(limit),...lettere.slice(limit))
+  console.log(alfanum);
+  return alfanum
+}
+
+
+
+
+

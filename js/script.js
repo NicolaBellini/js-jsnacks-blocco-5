@@ -125,3 +125,19 @@ console.log(long.length,short.length);
 const totalWeightShort = short.reduce((total, cucumber)=> total + cucumber.peso, 0);
 const totalWeightLong = long.reduce((total, cucumber)=> total + cucumber.peso, 0)
 console.log(totalWeightShort,totalWeightLong); 
+
+
+
+// JSNACK 3 //
+
+const parola = "pretoriano"
+const parolaGirata = giraParola(parola)
+console.log(parolaGirata);
+// functions //
+ 
+function giraParola(parola){
+  return parola.split("").reverse().join("");
+};
+
+
+// JSNACK 4 //
